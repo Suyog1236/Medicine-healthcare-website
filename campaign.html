@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Genericart Medicines</title>
+    <link rel="icon" href="img/genericart logo.jfif" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        .container {
+            display: block;
+            text-align: center;
+            width: 1500px;
+            background-color: blanchedalmond;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 5fr));
+            grid-gap: 20px;
+        }
+
+        .media-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .media-item img,
+        .media-item video {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .media-item:hover img,
+        .media-item:hover video {
+            transform: scale(1.1);
+        }
+
+        .media-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            color: #fff;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .media-item:hover .caption {
+            opacity: 5;
+        }
+    </style>
+
+
+
+    <script>
+        function enlargeImage(img) {
+            img.classList.toggle("enlarged");
+        }
+    </script>
+    <div class="container">
+        <h1> Campaigns we carried out and achievements we got</h1>
+    </div>
+    <hr>
+    <div class="media-grid">
+        <div class="media-item">
+            <img src="img/drug inspector.jpeg" alt="Image 1" onclick="enlargeImage(this)">
+            <div class="caption">Meet with the drug inspector</div>
+        </div>
+        <div class="media-item">
+            <img src="img/commisioner.jpeg" alt="Image 2" onclick="enlargeImage(this)">
+            <div class="caption">Meet With The commisioner</div>
+        </div>
+        <div class="media-item">
+            <video src="img/satisfied costumer.mp4" controls></video>
+            <div class="caption">review of a satisfied costumer</div>
+        </div>
+        <div class="media-item">
+            <video src="img/medical reviews.mp4" controls></video>
+            <div class="caption">review of the medical </div>
+        </div>
+        <div class="media-item">
+            <img src="img/free camp.jpeg" alt="Image 1">
+            <div class="caption">Free camp done at Pen Medical</div>
+        </div>
+        <!-- Add more media items as needed -->
+    </div>
+
+</body>
